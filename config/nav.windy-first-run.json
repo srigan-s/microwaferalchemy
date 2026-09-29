@@ -1,0 +1,43 @@
+{
+  "_comment": [
+    "Low-speed profile for curves after the straight three-second test passes.",
+    "Each wheel remains capped by robot.first-run.json at 5 PWM counts.",
+    "Recovery stays disabled so losing the boundary stops the robot."
+  ],
+  "follow": {
+    "rate_hz": 20.0,
+    "base_speed": 5,
+    "kp": 2.5,
+    "kd": 0.08,
+    "max_correction": 5,
+    "max_correction_delta": 1,
+    "min_curve_speed_factor": 0.4,
+    "curve_slowdown_start": 0.15,
+    "derivative_filter_alpha": 0.5,
+    "correction_mode": "differential",
+    "lateral_weight": 0.5,
+    "acquisition_samples": 3,
+    "acquisition_timeout_s": 3.0,
+    "acquisition_confidence": 0.6,
+    "ambiguous_confidence": 0.6,
+    "max_rejected_s": 0.3,
+    "junction_speed_factor": 0.5,
+    "junction_channels": 3,
+    "edge_loss_samples": 3,
+    "recovery_enabled": false,
+    "recovery_speed": 5,
+    "recovery_reverse_s": 0.15,
+    "recovery_search_s": 1.0,
+    "recovery_attempts": 1,
+    "stable_samples": 3,
+    "sensor_max_age_s": 0.25,
+    "max_duration_s": 10.0,
+    "max_ambiguous_s": 1.0,
+    "max_wrong_edge_s": 0.8,
+    "arrival_confirmations": 1,
+    "localization_max_age_s": 5.0,
+    "localization_min_confidence": 0.5
+  },
+  "telemetry_csv": null,
+  "telemetry_every_n": 1
+}

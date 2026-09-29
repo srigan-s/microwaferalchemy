@@ -1,0 +1,209 @@
+=== waferbot phase 2 verification log ===
+Fri Sep 25 15:01:54 EDT 2026
+
+=== 1. full test suite (mock hardware only) ===
+........................................................................ [ 24%]
+........................................................................ [ 49%]
+........................................................................ [ 74%]
+........................................................................ [ 99%]
+..                                                                       [100%]
+290 passed in 0.74s
+exit=0
+
+=== 2. syntax checks ===
+compileall exit=0
+bash -n deployment/install_pi.sh OK
+bash -n deployment/offline_install.sh OK
+bash -n deployment/verify_hardware.sh OK
+bash -n deployment/deploy.sh OK
+
+=== 3. installed-wheel CLI (mock default) ===
+waferbot 0.1.0
+raw_byte  raw(S1..S4)   BLACK(1)/WHITE(0)   timestamp
+0x07      1 0 1 1           0 1 0 0        456323.967
+0x07      1 0 1 1           0 1 0 0        456324.069
+{
+  "path": "maps/example_track.json",
+  "name": "example-ring (ILLUSTRATIVE - not measured)",
+  "is_example": true,
+  "physical_validated": false,
+  "edge_side_map": {
+    "positive": "BLACK_LEFT",
+    "negative": "BLACK_RIGHT"
+nodes ['A+', 'B+', 'B1', 'B2', 'B3', 'B-', 'C-', 'D-']
+cost_s 75.3
+completed True | steps 7 | final D-
+follow MAX_ITERATIONS samples 4
+switch completed True | phases 8
+motor-test confirmed False
+stop latched True | bus_quiet True
+stop latch cleared
+
+=== 4. offline bundle build + no-index install in a clean venv ===
+Processing ./dist/waferbot-offline-0.1.0/app
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: waferbot
+  Building wheel for waferbot (pyproject.toml): started
+  Building wheel for waferbot (pyproject.toml): finished with status 'done'
+  Created wheel for waferbot: filename=waferbot-0.1.0-py3-none-any.whl size=94862 sha256=48ba5c591ff57ed17e108e3c4374c1ae8abe72b52b304a3cf629bfe0ccf7f5c5
+  Stored in directory: /private/var/folders/kl/hmxfhnm121l_vyz9lh8c534w0000gn/T/pip-ephem-wheel-cache-comml75e/wheels/4b/9e/84/c39d961e4e6d2780267bcfb87455e739e645500b5a931ed9f9
+Successfully built waferbot
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /tmp/waferbot-phase1-venv/bin/python -m pip install --upgrade pip
+Collecting smbus2
+  Using cached smbus2-0.6.1-py2.py3-none-any.whl.metadata (7.1 kB)
+Using cached smbus2-0.6.1-py2.py3-none-any.whl (11 kB)
+Saved ./dist/waferbot-offline-0.1.0/wheels/smbus2-0.6.1-py2.py3-none-any.whl
+Successfully downloaded smbus2
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /tmp/waferbot-phase1-venv/bin/python -m pip install --upgrade pip
+copied 47 application files into /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.1.0/app
++ /tmp/waferbot-phase1-venv/bin/python -m pip wheel /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.1.0/app --no-deps --wheel-dir /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.1.0/wheels
++ /tmp/waferbot-phase1-venv/bin/python -m pip download smbus2 --only-binary=:all: --no-deps --dest /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.1.0/wheels
+bundle: /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.1.0
+wheels: smbus2-0.6.1-py2.py3-none-any.whl, waferbot-0.1.0-py3-none-any.whl
+contents are manifest-verified; no credential or vendor paths included
+Verifying bundle hashes
+verified 49 files
+Creating virtual environment at /tmp/wb-final-offline-81II/venv
+Installing waferbot offline (no network, wheels only)
+Looking in links: dist/waferbot-offline-0.1.0/wheels
+Processing ./dist/waferbot-offline-0.1.0/wheels/waferbot-0.1.0-py3-none-any.whl
+Processing ./dist/waferbot-offline-0.1.0/wheels/smbus2-0.6.1-py2.py3-none-any.whl (from waferbot[hardware])
+Installing collected packages: smbus2, waferbot
+
+Successfully installed smbus2-0.6.1 waferbot-0.1.0
+
+Offline installation complete.
+
+  /tmp/wb-final-offline-81II/venv/bin/waferbot --version
+  /tmp/wb-final-offline-81II/venv/bin/waferbot map --map "$HOME/.config/waferbot/track.json"
+
+Nothing starts automatically. Run 'deployment/verify_hardware.sh' next if this
+is a Raspberry Pi with the Raspbot V2 controller attached.
+offline venv: 0.1.0 0.6.1
+offline installed-wheel E2E completed: True D-
+
+=== 5. baseline vendor hash check (full log: baseline-check.log) ===
+files checked : 76997
+missing       : 0
+mismatched    : 0
+RESULT        : OK (baseline byte-identical)
+
+=== 6. FINAL verification pass ===
+Fri Sep 25 15:04:50 EDT 2026
+-- 6a. full test suite
+........................................................................ [ 24%]
+........................................................................ [ 48%]
+........................................................................ [ 72%]
+........................................................................ [ 97%]
+........                                                                 [100%]
+296 passed in 0.75s
+pytest exit=0
+-- 6b. compileall
+compileall exit=0
+-- 6c. shell syntax
+bash -n deployment/deploy.sh OK
+bash -n deployment/install_pi.sh OK
+bash -n deployment/offline_install.sh OK
+bash -n deployment/verify_hardware.sh OK
+-- 6d. offline bundle rebuild
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /tmp/waferbot-phase1-venv/bin/python -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /tmp/waferbot-phase1-venv/bin/python -m pip install --upgrade pip
++ /tmp/waferbot-phase1-venv/bin/python -m pip download smbus2 --only-binary=:all: --no-deps --dest /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.1.0/wheels
+bundle: /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.1.0
+wheels: smbus2-0.6.1-py2.py3-none-any.whl, waferbot-0.1.0-py3-none-any.whl
+contents are manifest-verified; no credential or vendor paths included
+-- 6e. offline install in a clean venv + installed-wheel CLI
+
+  /tmp/wb-verify-Xncd/venv/bin/waferbot --version
+  /tmp/wb-verify-Xncd/venv/bin/waferbot map --map "$HOME/.config/waferbot/track.json"
+
+Nothing starts automatically. Run 'deployment/verify_hardware.sh' next if this
+is a Raspberry Pi with the Raspbot V2 controller attached.
+installed: 0.1.0 | smbus2 0.6.1
+waferbot 0.1.0
+raw_byte  raw(S1..S4)   BLACK(1)/WHITE(0)   timestamp
+0x07      1 0 1 1           0 1 0 0        456504.740
+0x07      1 0 1 1           0 1 0 0        456504.845
+map: 21 nodes 28 edges | physical_ready False
+plan: ['A+', 'B+', 'B1', 'B2', 'B3', 'B-', 'C-', 'D-']
+execute: True D- | steps 7
+telemetry rows: 51 | events: ['follow', 'localization', 'motor', 'sensor']
+follow: MAX_ITERATIONS 3
+switch: True | phases 8
+refused: edge switching requires route authorization. Pass --authorize with --location and --route-id from the route executor.
+unauthorized switch exit=3
+motor-test uncertain: True
+stop latch: True | bus_quiet True
+waferbot: a stop was requested by another process; run `waferbot stop --clear` once you have checked the robot
+motion-while-latched exit=3
+stop latch cleared
+-- 6f. baseline vendor hash check
+files checked : 76997
+missing       : 0
+mismatched    : 0
+RESULT        : OK (baseline byte-identical)
+=== end of verification ===
+=== 6g. fresh baseline all-files hash check ===
+files checked : 76997
+missing       : 0
+mismatched    : 0
+elapsed_s     : 4.3
+RESULT        : OK (baseline byte-identical)
+
+=== 7. final bundle rebuild after documentation updates ===
+Fri Sep 25 15:06:07 EDT 2026
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /tmp/waferbot-phase1-venv/bin/python -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /tmp/waferbot-phase1-venv/bin/python -m pip install --upgrade pip
+bundle: /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.1.0
+wheels: smbus2-0.6.1-py2.py3-none-any.whl, waferbot-0.1.0-py3-none-any.whl
+contents are manifest-verified; no credential or vendor paths included
+Verifying bundle hashes
+verified 49 files
+Creating virtual environment at /tmp/wb-final2-iOGk/venv
+zsh:8: no such file or directory: /tmp/wb-final2-iOGk/venv/bin/waferbot
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import json,sys; d=json.load(sys.stdin); print('final installed-wheel E2E:', d['completed'], d['final_localization']['node_id'])
+                       ~~~~~~~~~^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+bundle files: 49
+=== end ===
+
+=== 7b. final installed-wheel E2E (rerun without truncating the installer output) ===
+offline_install exit=0
+
+Nothing starts automatically. Run 'deployment/verify_hardware.sh' next if this
+is a Raspberry Pi with the Raspbot V2 controller attached.
+final installed-wheel E2E: True D- | steps 7
+
+note: the JSONDecodeError printed in section 7 came from piping the installer through `head -3`, which closed the pipe early; section 7b re-ran it without truncation and the install plus installed-wheel E2E both succeeded.

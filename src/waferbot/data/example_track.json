@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "name": "example-ring (ILLUSTRATIVE - not measured)",
+  "is_example": true,
+  "physical_validated": false,
+  "edge_side_map": {
+    "positive": "BLACK_LEFT",
+    "negative": "BLACK_RIGHT"
+  },
+  "notes": [
+    "ILLUSTRATIVE MAP. Distances, speeds, and coordinates are invented to exercise",
+    "the planner and executor; they are not measurements of any real tape layout.",
+    "edge_side ('positive'/'negative') is a naming convention only. The mapping to",
+    "BLACK_LEFT/BLACK_RIGHT in edge_side_map is an example assumption: measure the",
+    "real relationship (tape on the robot's left or right) before physical use.",
+    "'direction' is the travel direction along an edge (forward/reverse) and is",
+    "independent of edge_side.",
+    "To go physical: replace nodes/edges with measured values, set is_example=false,",
+    "set physical_validated=true, and confirm edge_side_map."
+  ],
+  "nodes": [
+    {
+      "node_id": "A+",
+      "station_id": "A",
+      "x": 0.0,
+      "y": 0.0,
+      "heading": 0.0,
+      "edge_side": "positive",
+      "direction": "forward",
+      "node_type": "station",
+      "marker_id": "A+"
+    },
+    {
+      "node_id": "B+",
+      "station_id": "B",
+      "x": 4.0,
+      "y": 0.0,
+      "heading": 90.0,
+      "edge_side": "positive",
+      "direction": "forward",
+      "node_type": "station",
+      "marker_id": "B+"
+    },
+    {
+      "node_id": "C+",
+      "station_id": "C",
+      "x": 4.0,
+      "y": 3.0,
+      "heading": 180.0,
+      "edge_side": "positive",
+      "direction": "forward",
+      "node_type": "station",
+      "marker_id": "C+"
+    },
+    {
+      "node_id": "D+",
+      "station_id": "D",
+      "x": 0.0,
+      "y": 3.0,
+      "heading": 270.0,
+      "edge_side": "positive",
+      "direction": "forward",
+      "node_type": "station",
+      "marker_id": "D+"
+    },
+    {
+      "node_id": "A-",
+      "station_id": "A",
+      "x": 0.3,
+      "y": 0.3,
+      "heading": 0.0,
+      "edge_side": "negative",
+      "direction": "forward",
+      "node_type": "station",
+      "marker_id": "A-"
+    },
+    {
+      "node_id": "B-",
+      "station_id": "B",
+      "x": 3.7,
+      "y": 0.3,
+      "heading": 90.0,
+      "edge_side": "negative",
+      "direction": "forward",
+      "node_type": "station",
+      "marker_id": "B-"
+    },
+    {
+      "node_id": "C-",
+      "station_id": "C",
+      "x": 3.7,
+      "y": 2.7,
+      "heading": 180.0,
+      "edge_side": "negative",
+      "direction": "forward",
+      "node_type": "station",
+      "marker_id": "C-"
+    },
+    {
+      "node_id": "D-",
+      "station_id": "D",
+      "x": 0.3,
+      "y": 2.7,
+      "heading": 270.0,
+      "edge_side": "negative",
+      "direction": "forward",
+      "node_type": "station",
+      "marker_id": "D-"
+    },
+    {
+      "node_id": "A1",
+      "station_id": "A",
+      "x": 0.3,
+      "y": 0.15,
+      "heading": 270.0,
+      "edge_side": "negative",
+      "direction": "forward",
+      "node_type": "junction",
+      "marker_id": null
+    },
+    {
+      "node_id": "A2",
+      "station_id": "A",
+      "x": 0.15,
+      "y": 0.15,
+      "heading": 270.0,
+      "edge_side": null,
+      "direction": null,
+      "node_type": "switch",
+      "marker_id": "A2"
+    },
+    {
+      "node_id": "A3",
+      "station_id": "A",
+      "x": 0.0,
+      "y": 0.15,
+      "heading": 0.0,
+      "edge_side": "positive",
+      "direction": "forward",
+      "node_type": "junction",
+      "marker_id": null
+    },
+    {
+      "node_id": "B1",
+      "station_id": "B",
+      "x": 4.0,
+      "y": 0.2,
+      "heading": 90.0,
+      "edge_side": "positive",
+      "direction": "forward",
+      "node_type": "junction",
+      "marker_id": null
+    },
+    {
+      "node_id": "B2",
+      "station_id": "B",
+      "x": 3.85,
+      "y": 0.3,
+      "heading": 90.0,
+      "edge_side": null,
+      "direction": null,
+      "node_type": "switch",
+      "marker_id": "B2"
+    },
+    {
+      "node_id": "B3",
+      "station_id": "B",
+      "x": 3.7,
+      "y": 0.4,
+      "heading": 90.0,
+      "edge_side": "negative",
+      "direction": "forward",
+      "node_type": "junction",
+      "marker_id": null
+    },
+    {
+      "node_id": "C1",
+      "station_id": "C",
+      "x": 3.7,
+      "y": 2.9,
+      "heading": 180.0,
+      "edge_side": "negative",
+      "direction": "forward",
+      "node_type": "junction",
+      "marker_id": null
+    },
+    {
+      "node_id": "C2",
+      "station_id": "C",
+      "x": 3.85,
+      "y": 2.9,
+      "heading": 180.0,
+      "edge_side": null,
+      "direction": null,
+      "node_type": "switch",
+      "marker_id": "C2"
+    },
+    {
+      "node_id": "C3",
+      "station_id": "C",
+      "x": 4.0,
+      "y": 2.9,
+      "heading": 90.0,
+      "edge_side": "positive",
+      "direction": "forward",
+      "node_type": "junction",
+      "marker_id": null
+    },
+    {
+      "node_id": "D1",
+      "station_id": "D",
+      "x": 0.0,
+      "y": 2.9,
+      "heading": 270.0,
+      "edge_side": "positive",
+      "direction": "forward",
+      "node_type": "junction",
+      "marker_id": null
+    },
+    {
+      "node_id": "D2",
+      "station_id": "D",
+      "x": 0.15,
+      "y": 2.85,
+      "heading": 270.0,
+      "edge_side": null,
+      "direction": null,
+      "node_type": "switch",
+      "marker_id": "D2"
+    },
+    {
+      "node_id": "D3",
+      "station_id": "D",
+      "x": 0.3,
+      "y": 2.8,
+      "heading": 270.0,
+      "edge_side": "negative",
+      "direction": "forward",
+      "node_type": "junction",
+      "marker_id": null
+    },
+    {
+      "node_id": "PARK",
+      "station_id": "PARK",
+      "x": 0.5,
+      "y": 3.4,
+      "heading": 90.0,
+      "edge_side": null,
+      "direction": null,
+      "node_type": "dock",
+      "marker_id": "PARK"
+    }
+  ],
+  "edges": [
+    {
+      "source": "A+",
+      "destination": "B+",
+      "distance_m": 4.0,
+      "speed_limit_mps": 0.15,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "positive",
+      "enabled": true,
+      "notes": "outer lane, bottom"
+    },
+    {
+      "source": "B+",
+      "destination": "C+",
+      "distance_m": 3.0,
+      "speed_limit_mps": 0.15,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "positive",
+      "enabled": true,
+      "notes": "outer lane, right"
+    },
+    {
+      "source": "C+",
+      "destination": "D+",
+      "distance_m": 4.0,
+      "speed_limit_mps": 0.15,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "positive",
+      "enabled": true,
+      "notes": "outer lane, top"
+    },
+    {
+      "source": "D+",
+      "destination": "A+",
+      "distance_m": 3.0,
+      "speed_limit_mps": 0.15,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "positive",
+      "enabled": true,
+      "notes": "outer lane, left"
+    },
+    {
+      "source": "A-",
+      "destination": "B-",
+      "distance_m": 3.4,
+      "speed_limit_mps": 0.15,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "negative",
+      "enabled": true,
+      "notes": "inner lane, bottom"
+    },
+    {
+      "source": "B-",
+      "destination": "C-",
+      "distance_m": 2.4,
+      "speed_limit_mps": 0.15,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "negative",
+      "enabled": true,
+      "notes": "inner lane, right"
+    },
+    {
+      "source": "C-",
+      "destination": "D-",
+      "distance_m": 3.4,
+      "speed_limit_mps": 0.15,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "negative",
+      "enabled": true,
+      "notes": "inner lane, top"
+    },
+    {
+      "source": "D-",
+      "destination": "A-",
+      "distance_m": 2.4,
+      "speed_limit_mps": 0.15,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "negative",
+      "enabled": true,
+      "notes": "inner lane, left"
+    },
+    {
+      "source": "B+",
+      "destination": "B1",
+      "distance_m": 0.25,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "positive",
+      "enabled": true
+    },
+    {
+      "source": "B1",
+      "destination": "B2",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "action": "SWITCH_EDGE",
+      "edge_side": "positive",
+      "target_edge_side": "negative",
+      "crossing_angle_deg": 90.0,
+      "switch_time_s": 2.0,
+      "enabled": true,
+      "notes": "B corner switch, outer to inner; 90 deg = lateral crossing"
+    },
+    {
+      "source": "B2",
+      "destination": "B3",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "negative",
+      "enabled": true
+    },
+    {
+      "source": "B3",
+      "destination": "B-",
+      "distance_m": 0.15,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "negative",
+      "enabled": true
+    },
+    {
+      "source": "C-",
+      "destination": "C1",
+      "distance_m": 0.25,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "negative",
+      "enabled": true
+    },
+    {
+      "source": "C1",
+      "destination": "C2",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "action": "SWITCH_EDGE",
+      "edge_side": "negative",
+      "target_edge_side": "positive",
+      "crossing_angle_deg": 90.0,
+      "switch_time_s": 2.0,
+      "enabled": true,
+      "notes": "C corner switch, inner to outer; 90 deg = lateral crossing"
+    },
+    {
+      "source": "C2",
+      "destination": "C3",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "positive",
+      "enabled": true
+    },
+    {
+      "source": "C3",
+      "destination": "C+",
+      "distance_m": 0.15,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "positive",
+      "enabled": true
+    },
+    {
+      "source": "D+",
+      "destination": "D1",
+      "distance_m": 0.15,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "positive",
+      "enabled": true
+    },
+    {
+      "source": "D1",
+      "destination": "D2",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "action": "SWITCH_EDGE",
+      "edge_side": "positive",
+      "target_edge_side": "negative",
+      "crossing_angle_deg": 90.0,
+      "switch_time_s": 2.0,
+      "enabled": true,
+      "notes": "D corner switch, outer to inner; 90 deg = lateral crossing"
+    },
+    {
+      "source": "D2",
+      "destination": "D3",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "negative",
+      "enabled": true
+    },
+    {
+      "source": "D3",
+      "destination": "D-",
+      "distance_m": 0.15,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "negative",
+      "enabled": true
+    },
+    {
+      "source": "A-",
+      "destination": "A1",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "negative",
+      "enabled": true
+    },
+    {
+      "source": "A1",
+      "destination": "A2",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "action": "SWITCH_EDGE",
+      "edge_side": "negative",
+      "target_edge_side": "positive",
+      "crossing_angle_deg": 90.0,
+      "switch_time_s": 2.0,
+      "enabled": true,
+      "notes": "A corner switch, inner to outer; 90 deg = lateral crossing"
+    },
+    {
+      "source": "A2",
+      "destination": "A3",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "positive",
+      "enabled": true
+    },
+    {
+      "source": "A3",
+      "destination": "A+",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "action": "FOLLOW_EDGE",
+      "edge_side": "positive",
+      "enabled": true
+    },
+    {
+      "source": "D-",
+      "destination": "PARK",
+      "distance_m": 0.8,
+      "speed_limit_mps": 0.08,
+      "action": "DOCK",
+      "edge_side": "negative",
+      "dock_time_s": 1.5,
+      "enabled": true,
+      "notes": "dock approach from the inner lane"
+    },
+    {
+      "source": "PARK",
+      "destination": "D-",
+      "distance_m": 0.8,
+      "speed_limit_mps": 0.08,
+      "action": "DOCK",
+      "edge_side": "negative",
+      "dock_time_s": 1.5,
+      "enabled": true,
+      "notes": "depart the dock onto the inner lane"
+    },
+    {
+      "source": "PARK",
+      "destination": "D2",
+      "distance_m": 0.7,
+      "speed_limit_mps": 0.05,
+      "action": "TURN",
+      "edge_side": "negative",
+      "turn_time_s": 0.8,
+      "enabled": true,
+      "notes": "rotate in place to line up with the switch node"
+    },
+    {
+      "source": "PARK",
+      "destination": "PARK",
+      "distance_m": 0.0,
+      "speed_limit_mps": 0.05,
+      "action": "STOP",
+      "enabled": true,
+      "notes": "stop action example: stationary self action at the dock",
+      "edge_side": null
+    }
+  ]
+}

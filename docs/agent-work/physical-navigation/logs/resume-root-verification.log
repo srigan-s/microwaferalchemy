@@ -1,0 +1,16 @@
+September 28 interrupted implementation acceptance checks
+Command: PYTHONPATH=src /tmp/waferbot-phase1-venv/bin/python -m pytest -q
+Exit status: 0
+Collected: 473 tests
+........................................................................ [ 15%]
+........................................................................ [ 30%]
+........................................................................ [ 45%]
+.............................................................. [ 58%]
+........................................................................ [ 73%]
+........................................................................ [ 89%]
+...................................................                      [100%]
+
+Standalone diagnostic: 6 unittest cases passed.
+Both-edge synthetic diagnostic completed; not hardware evidence.
+0.1.0 bundle: 58 manifest entries verified; sensor script matches source.
+Original files checked: 76997; missing/modified: 0

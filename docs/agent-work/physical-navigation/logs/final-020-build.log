@@ -1,0 +1,19 @@
+Processing ./dist/waferbot-offline-0.2.0/app
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: waferbot
+  Building wheel for waferbot (pyproject.toml): started
+  Building wheel for waferbot (pyproject.toml): finished with status 'done'
+  Created wheel for waferbot: filename=waferbot-0.2.0-py3-none-any.whl size=127950 sha256=0624c6d3e2df47889d0bfd286720b0fa352f42883e2b8efffd0793fc5fb06f73
+  Stored in directory: /private/var/folders/kl/hmxfhnm121l_vyz9lh8c534w0000gn/T/pip-ephem-wheel-cache-898wxndh/wheels/6a/dc/6f/39801a55bb2f6c0ba58f36916649bfa2f407ab3a8f841776ca
+Successfully built waferbot
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /tmp/waferbot-phase1-venv/bin/python -m pip install --upgrade pip
+reusing 2 existing wheel(s) in /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.2.0
+copied 60 application files into /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.2.0/app
+copied deployment/ to the bundle root
++ /tmp/waferbot-phase1-venv/bin/python -m pip wheel /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.2.0/app --no-deps --wheel-dir /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.2.0/wheels --no-build-isolation
+bundle: /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.2.0
+wheels: smbus2-0.6.1-py2.py3-none-any.whl, waferbot-0.2.0-py3-none-any.whl
+contents are manifest-verified; no credential or vendor paths included

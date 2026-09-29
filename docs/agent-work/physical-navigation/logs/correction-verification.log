@@ -1,0 +1,89 @@
+=== waferbot correction-bundle verification ===
+Fri Sep 25 15:39:47 EDT 2026
+-- full suite
+........................................................................ [ 18%]
+........................................................................ [ 36%]
+........................................................................ [ 54%]
+........................................................................ [ 73%]
+........................................................................ [ 91%]
+.................................                                        [100%]
+393 passed in 9.08s
+pytest exit=0
+-- compileall
+exit=0
+-- shell syntax
+OK deployment/deploy.sh
+OK deployment/install_pi.sh
+OK deployment/offline_install.sh
+OK deployment/verify_hardware.sh
+-- bundle rebuilt
+README.txt
+app
+bundle.json
+deployment
+manifest.json
+wheels
+-- offline install from the shipped script with an invalid index
+offline install exit=0
+verified 56 files and required wheels ['smbus2', 'waferbot']
+Successfully installed smbus2-0.6.1 waferbot-0.1.0
+-- installed-wheel CLI from an unrelated cwd (/tmp)
+installed 0.1.0 0.6.1
+packaged map: 21 nodes; /private/tmp/wb-correction-final-k2Gc/venv/lib/python3.14/site-packages/waferbot/data/example_track.json
+raw_byte  raw(S1..S4)   BLACK(1)/WHITE(0)   timestamp
+0x07      1 0 1 1           0 1 0 0        458606.876
+mock E2E: True D-
+-- baseline all-files hash check
+=== baseline all-files hash check (correction bundle) ===
+files checked : 76997
+missing       : 0
+mismatched    : 0
+elapsed_s     : 5.1
+RESULT        : OK (baseline byte-identical)
+
+=== final confirmation run ===
+Fri Sep 25 15:41:22 EDT 2026
+........................................................................ [ 18%]
+........................................................................ [ 36%]
+........................................................................ [ 54%]
+........................................................................ [ 73%]
+........................................................................ [ 91%]
+.................................                                        [100%]
+393 passed in 9.42s
+pytest exit=0
+compileall exit=0
+OK deployment/deploy.sh
+OK deployment/install_pi.sh
+OK deployment/offline_install.sh
+OK deployment/verify_hardware.sh
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /tmp/waferbot-phase1-venv/bin/python -m pip install --upgrade pip
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /tmp/waferbot-phase1-venv/bin/python -m pip install --upgrade pip
+bundle: /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.1.0
+wheels: smbus2-0.6.1-py2.py3-none-any.whl, waferbot-0.1.0-py3-none-any.whl
+contents are manifest-verified; no credential or vendor paths included
+
+=== final wrap-up run (safety fixes + checkpoint) ===
+Fri Sep 25 15:43:26 EDT 2026
+........................................................................ [ 18%]
+........................................................................ [ 36%]
+........................................................................ [ 54%]
+........................................................................ [ 73%]
+........................................................................ [ 91%]
+.................................                                        [100%]
+393 passed in 9.32s
+pytest exit=0
+compileall exit=0
+OK deployment/deploy.sh
+OK deployment/install_pi.sh
+OK deployment/offline_install.sh
+OK deployment/verify_hardware.sh
+=== baseline all-files hash check (wrap-up) ===
+files checked : 76997
+missing       : 0
+mismatched    : 0
+elapsed_s     : 4.6
+RESULT        : OK (baseline byte-identical)

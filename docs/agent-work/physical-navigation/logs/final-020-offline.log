@@ -1,0 +1,768 @@
+Verifying bundle hashes (no network access is used)
+verified 68 files and required wheels ['smbus2', 'waferbot']
+Creating virtual environment at /tmp/waferbot-final-020.a9bw6u/venv
+Installing waferbot offline (--no-index, wheels only)
+Looking in links: /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.2.0/wheels
+Processing ./dist/waferbot-offline-0.2.0/wheels/waferbot-0.2.0-py3-none-any.whl
+Processing ./dist/waferbot-offline-0.2.0/wheels/smbus2-0.6.1-py2.py3-none-any.whl (from waferbot[hardware])
+Installing collected packages: smbus2, waferbot
+
+Successfully installed smbus2-0.6.1 waferbot-0.2.0
+
+Offline installation complete.
+
+  interpreter : /tmp/waferbot-final-020.a9bw6u/venv/bin/python
+  cli         : /tmp/waferbot-final-020.a9bw6u/venv/bin/waferbot
+
+Use it with an explicit shell path (no activation required):
+  /tmp/waferbot-final-020.a9bw6u/venv/bin/waferbot --version
+
+Or activate the environment first:
+  . "/tmp/waferbot-final-020.a9bw6u/venv/bin/activate"
+  waferbot --version
+
+Nothing starts automatically. Read-only hardware check next:
+  bash deployment/verify_hardware.sh --venv "/tmp/waferbot-final-020.a9bw6u/venv"
+waferbot 0.2.0
+{
+  "route_id": "route-b127167a6f64",
+  "start_node": "A+",
+  "destination_node": "D-",
+  "required_waypoints": [
+    "B-"
+  ],
+  "algorithm": "dijkstra",
+  "nodes": [
+    "A+",
+    "B+",
+    "B1",
+    "B2",
+    "B3",
+    "B-",
+    "C-",
+    "D-"
+  ],
+  "distance_m": 10.6,
+  "total_cost_s": 75.33333333333334,
+  "heuristic_admissible": true,
+  "steps": [
+    {
+      "index": 0,
+      "source": "A+",
+      "destination": "B+",
+      "action": "FOLLOW_EDGE",
+      "distance_m": 4.0,
+      "speed_limit_mps": 0.15,
+      "crossing_angle_deg": null,
+      "edge_side": "positive",
+      "target_edge_side": null,
+      "travel_time_s": 26.666666666666668,
+      "overhead_s": 0.0,
+      "cost_s": 26.666666666666668
+    },
+    {
+      "index": 1,
+      "source": "B+",
+      "destination": "B1",
+      "action": "FOLLOW_EDGE",
+      "distance_m": 0.25,
+      "speed_limit_mps": 0.1,
+      "crossing_angle_deg": null,
+      "edge_side": "positive",
+      "target_edge_side": null,
+      "travel_time_s": 2.5,
+      "overhead_s": 0.0,
+      "cost_s": 2.5
+    },
+    {
+      "index": 2,
+      "source": "B1",
+      "destination": "B2",
+      "action": "SWITCH_EDGE",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "crossing_angle_deg": 90.0,
+      "edge_side": "positive",
+      "target_edge_side": "negative",
+      "travel_time_s": 2.0,
+      "overhead_s": 2.0,
+      "cost_s": 4.0
+    },
+    {
+      "index": 3,
+      "source": "B2",
+      "destination": "B3",
+      "action": "FOLLOW_EDGE",
+      "distance_m": 0.2,
+      "speed_limit_mps": 0.1,
+      "crossing_angle_deg": null,
+      "edge_side": "negative",
+      "target_edge_side": null,
+      "travel_time_s": 2.0,
+      "overhead_s": 0.0,
+      "cost_s": 2.0
+    },
+    {
+      "index": 4,
+      "source": "B3",
+      "destination": "B-",
+      "action": "FOLLOW_EDGE",
+      "distance_m": 0.15,
+      "speed_limit_mps": 0.1,
+      "crossing_angle_deg": null,
+      "edge_side": "negative",
+      "target_edge_side": null,
+      "travel_time_s": 1.4999999999999998,
+      "overhead_s": 0.0,
+      "cost_s": 1.4999999999999998
+    },
+    {
+      "index": 5,
+      "source": "B-",
+      "destination": "C-",
+      "action": "FOLLOW_EDGE",
+      "distance_m": 2.4,
+      "speed_limit_mps": 0.15,
+      "crossing_angle_deg": null,
+      "edge_side": "negative",
+      "target_edge_side": null,
+      "travel_time_s": 16.0,
+      "overhead_s": 0.0,
+      "cost_s": 16.0
+    },
+    {
+      "index": 6,
+      "source": "C-",
+      "destination": "D-",
+      "action": "FOLLOW_EDGE",
+      "distance_m": 3.4,
+      "speed_limit_mps": 0.15,
+      "crossing_angle_deg": null,
+      "edge_side": "negative",
+      "target_edge_side": null,
+      "travel_time_s": 22.666666666666668,
+      "overhead_s": 0.0,
+      "cost_s": 22.666666666666668
+    }
+  ]
+}
+{
+  "completed": true,
+  "dry_run": false,
+  "reason": "arrived at D- after 7 step(s)",
+  "route": {
+    "route_id": "route-b127167a6f64",
+    "start_node": "A+",
+    "destination_node": "D-",
+    "required_waypoints": [
+      "B-"
+    ],
+    "algorithm": "dijkstra",
+    "nodes": [
+      "A+",
+      "B+",
+      "B1",
+      "B2",
+      "B3",
+      "B-",
+      "C-",
+      "D-"
+    ],
+    "distance_m": 10.6,
+    "total_cost_s": 75.33333333333334,
+    "heuristic_admissible": true,
+    "steps": [
+      {
+        "index": 0,
+        "source": "A+",
+        "destination": "B+",
+        "action": "FOLLOW_EDGE",
+        "distance_m": 4.0,
+        "speed_limit_mps": 0.15,
+        "crossing_angle_deg": null,
+        "edge_side": "positive",
+        "target_edge_side": null,
+        "travel_time_s": 26.666666666666668,
+        "overhead_s": 0.0,
+        "cost_s": 26.666666666666668
+      },
+      {
+        "index": 1,
+        "source": "B+",
+        "destination": "B1",
+        "action": "FOLLOW_EDGE",
+        "distance_m": 0.25,
+        "speed_limit_mps": 0.1,
+        "crossing_angle_deg": null,
+        "edge_side": "positive",
+        "target_edge_side": null,
+        "travel_time_s": 2.5,
+        "overhead_s": 0.0,
+        "cost_s": 2.5
+      },
+      {
+        "index": 2,
+        "source": "B1",
+        "destination": "B2",
+        "action": "SWITCH_EDGE",
+        "distance_m": 0.2,
+        "speed_limit_mps": 0.1,
+        "crossing_angle_deg": 90.0,
+        "edge_side": "positive",
+        "target_edge_side": "negative",
+        "travel_time_s": 2.0,
+        "overhead_s": 2.0,
+        "cost_s": 4.0
+      },
+      {
+        "index": 3,
+        "source": "B2",
+        "destination": "B3",
+        "action": "FOLLOW_EDGE",
+        "distance_m": 0.2,
+        "speed_limit_mps": 0.1,
+        "crossing_angle_deg": null,
+        "edge_side": "negative",
+        "target_edge_side": null,
+        "travel_time_s": 2.0,
+        "overhead_s": 0.0,
+        "cost_s": 2.0
+      },
+      {
+        "index": 4,
+        "source": "B3",
+        "destination": "B-",
+        "action": "FOLLOW_EDGE",
+        "distance_m": 0.15,
+        "speed_limit_mps": 0.1,
+        "crossing_angle_deg": null,
+        "edge_side": "negative",
+        "target_edge_side": null,
+        "travel_time_s": 1.4999999999999998,
+        "overhead_s": 0.0,
+        "cost_s": 1.4999999999999998
+      },
+      {
+        "index": 5,
+        "source": "B-",
+        "destination": "C-",
+        "action": "FOLLOW_EDGE",
+        "distance_m": 2.4,
+        "speed_limit_mps": 0.15,
+        "crossing_angle_deg": null,
+        "edge_side": "negative",
+        "target_edge_side": null,
+        "travel_time_s": 16.0,
+        "overhead_s": 0.0,
+        "cost_s": 16.0
+      },
+      {
+        "index": 6,
+        "source": "C-",
+        "destination": "D-",
+        "action": "FOLLOW_EDGE",
+        "distance_m": 3.4,
+        "speed_limit_mps": 0.15,
+        "crossing_angle_deg": null,
+        "edge_side": "negative",
+        "target_edge_side": null,
+        "travel_time_s": 22.666666666666668,
+        "overhead_s": 0.0,
+        "cost_s": 22.666666666666668
+      }
+    ]
+  },
+  "elapsed_s": 0.0007837500306777656,
+  "steps": [
+    {
+      "index": 0,
+      "action": "FOLLOW_EDGE",
+      "source": "A+",
+      "destination": "B+",
+      "completed": true,
+      "reason": "arrived at B+",
+      "duration_s": 0.00014512502821162343,
+      "detail": {
+        "target_edge": "BLACK_LEFT",
+        "stop_reason": "ARRIVAL",
+        "samples": 2,
+        "elapsed_s": 0.00012049998622387648,
+        "recoveries": 0,
+        "acquired": true,
+        "fault": null,
+        "metrics": {
+          "edge": "BLACK_LEFT",
+          "boundary_samples": 2,
+          "rms_error_pitches": 0.0,
+          "max_abs_error_pitches": 0.0,
+          "final_error_pitches": 0.0,
+          "rejected_samples": 0,
+          "ambiguous_samples": 0,
+          "curve_slow_samples": 0,
+          "minimum_base_command": 40
+        },
+        "final_detection": {
+          "raw": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "normalized": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "edge": "BLACK_LEFT",
+          "timestamp": 504787.939450666,
+          "stable": true,
+          "stable_edge": "BLACK_LEFT",
+          "stable_count": 5,
+          "age_s": 1.0840012691915035e-06,
+          "outer_left": false,
+          "outer_right": false,
+          "junction": false,
+          "rejected": false,
+          "reject_reason": null
+        },
+        "arrival_localization": {
+          "node_id": "B+",
+          "marker_id": "B+",
+          "confidence": 1.0,
+          "source": "mock",
+          "timestamp": 504787.939456375
+        }
+      }
+    },
+    {
+      "index": 1,
+      "action": "FOLLOW_EDGE",
+      "source": "B+",
+      "destination": "B1",
+      "completed": true,
+      "reason": "arrived at B1",
+      "duration_s": 8.950004121288657e-05,
+      "detail": {
+        "target_edge": "BLACK_LEFT",
+        "stop_reason": "ARRIVAL",
+        "samples": 2,
+        "elapsed_s": 6.704102270305157e-05,
+        "recoveries": 0,
+        "acquired": true,
+        "fault": null,
+        "metrics": {
+          "edge": "BLACK_LEFT",
+          "boundary_samples": 2,
+          "rms_error_pitches": 0.0,
+          "max_abs_error_pitches": 0.0,
+          "final_error_pitches": 0.0,
+          "rejected_samples": 0,
+          "ambiguous_samples": 0,
+          "curve_slow_samples": 0,
+          "minimum_base_command": 40
+        },
+        "final_detection": {
+          "raw": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "normalized": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "edge": "BLACK_LEFT",
+          "timestamp": 504787.93955075,
+          "stable": true,
+          "stable_edge": "BLACK_LEFT",
+          "stable_count": 5,
+          "age_s": 9.579816833138466e-07,
+          "outer_left": false,
+          "outer_right": false,
+          "junction": false,
+          "rejected": false,
+          "reject_reason": null
+        },
+        "arrival_localization": {
+          "node_id": "B1",
+          "marker_id": "B1",
+          "confidence": 1.0,
+          "source": "mock",
+          "timestamp": 504787.939555125
+        }
+      }
+    },
+    {
+      "index": 2,
+      "action": "SWITCH_EDGE",
+      "source": "B1",
+      "destination": "B2",
+      "completed": true,
+      "reason": "switched from BLACK_LEFT to BLACK_RIGHT",
+      "duration_s": 0.00020429096184670925,
+      "detail": {
+        "completed": true,
+        "reason": "switched from BLACK_LEFT to BLACK_RIGHT",
+        "current_edge": "BLACK_LEFT",
+        "target_edge": "BLACK_RIGHT",
+        "phases": [
+          {
+            "phase": "FOLLOW_EDGE",
+            "t": 504787.939603541
+          },
+          {
+            "phase": "APPROACH_SWITCH_LOCATION",
+            "t": 504787.939621833
+          },
+          {
+            "phase": "CONFIRM_SWITCH_LOCATION",
+            "t": 504787.939622125
+          },
+          {
+            "phase": "REDUCE_SPEED",
+            "t": 504787.939628625
+          },
+          {
+            "phase": "EXECUTE_SWITCH",
+            "t": 504787.939648958
+          },
+          {
+            "phase": "VERIFY_OPPOSITE_EDGE",
+            "t": 504787.939673625
+          },
+          {
+            "phase": "RESUME_FOLLOWING",
+            "t": 504787.939699958
+          },
+          {
+            "phase": "COMPLETE",
+            "t": 504787.939764916
+          }
+        ],
+        "elapsed_s": 0.00017545802984386683,
+        "travelled_s": 5.858304211869836e-05,
+        "verification_samples": 3,
+        "destination": {
+          "node_id": "B2",
+          "source": "mock"
+        },
+        "fault": null,
+        "geometry": null
+      }
+    },
+    {
+      "index": 3,
+      "action": "FOLLOW_EDGE",
+      "source": "B2",
+      "destination": "B3",
+      "completed": true,
+      "reason": "arrived at B3",
+      "duration_s": 7.491599535569549e-05,
+      "detail": {
+        "target_edge": "BLACK_RIGHT",
+        "stop_reason": "ARRIVAL",
+        "samples": 2,
+        "elapsed_s": 5.920900730416179e-05,
+        "recoveries": 0,
+        "acquired": true,
+        "fault": null,
+        "metrics": {
+          "edge": "BLACK_RIGHT",
+          "boundary_samples": 2,
+          "rms_error_pitches": 0.0,
+          "max_abs_error_pitches": 0.0,
+          "final_error_pitches": 0.0,
+          "rejected_samples": 0,
+          "ambiguous_samples": 0,
+          "curve_slow_samples": 0,
+          "minimum_base_command": 40
+        },
+        "final_detection": {
+          "raw": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "normalized": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "edge": "BLACK_RIGHT",
+          "timestamp": 504787.939841125,
+          "stable": true,
+          "stable_edge": "BLACK_RIGHT",
+          "stable_count": 5,
+          "age_s": 7.500057108700275e-07,
+          "outer_left": false,
+          "outer_right": false,
+          "junction": false,
+          "rejected": false,
+          "reject_reason": null
+        },
+        "arrival_localization": {
+          "node_id": "B3",
+          "marker_id": "B3",
+          "confidence": 1.0,
+          "source": "mock",
+          "timestamp": 504787.939844875
+        }
+      }
+    },
+    {
+      "index": 4,
+      "action": "FOLLOW_EDGE",
+      "source": "B3",
+      "destination": "B-",
+      "completed": true,
+      "reason": "arrived at B-",
+      "duration_s": 6.554200081154704e-05,
+      "detail": {
+        "target_edge": "BLACK_RIGHT",
+        "stop_reason": "ARRIVAL",
+        "samples": 2,
+        "elapsed_s": 5.2416056860238314e-05,
+        "recoveries": 0,
+        "acquired": true,
+        "fault": null,
+        "metrics": {
+          "edge": "BLACK_RIGHT",
+          "boundary_samples": 2,
+          "rms_error_pitches": 0.0,
+          "max_abs_error_pitches": 0.0,
+          "final_error_pitches": 0.0,
+          "rejected_samples": 0,
+          "ambiguous_samples": 0,
+          "curve_slow_samples": 0,
+          "minimum_base_command": 40
+        },
+        "final_detection": {
+          "raw": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "normalized": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "edge": "BLACK_RIGHT",
+          "timestamp": 504787.939910041,
+          "stable": true,
+          "stable_edge": "BLACK_RIGHT",
+          "stable_count": 5,
+          "age_s": 7.500057108700275e-07,
+          "outer_left": false,
+          "outer_right": false,
+          "junction": false,
+          "rejected": false,
+          "reject_reason": null
+        },
+        "arrival_localization": {
+          "node_id": "B-",
+          "marker_id": "B-",
+          "confidence": 1.0,
+          "source": "mock",
+          "timestamp": 504787.9399135
+        }
+      }
+    },
+    {
+      "index": 5,
+      "action": "FOLLOW_EDGE",
+      "source": "B-",
+      "destination": "C-",
+      "completed": true,
+      "reason": "arrived at C-",
+      "duration_s": 7.708295015618205e-05,
+      "detail": {
+        "target_edge": "BLACK_RIGHT",
+        "stop_reason": "ARRIVAL",
+        "samples": 2,
+        "elapsed_s": 6.35419855825603e-05,
+        "recoveries": 0,
+        "acquired": true,
+        "fault": null,
+        "metrics": {
+          "edge": "BLACK_RIGHT",
+          "boundary_samples": 2,
+          "rms_error_pitches": 0.0,
+          "max_abs_error_pitches": 0.0,
+          "final_error_pitches": 0.0,
+          "rejected_samples": 0,
+          "ambiguous_samples": 0,
+          "curve_slow_samples": 0,
+          "minimum_base_command": 40
+        },
+        "final_detection": {
+          "raw": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "normalized": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "edge": "BLACK_RIGHT",
+          "timestamp": 504787.939984291,
+          "stable": true,
+          "stable_edge": "BLACK_RIGHT",
+          "stable_count": 5,
+          "age_s": 7.500057108700275e-07,
+          "outer_left": false,
+          "outer_right": false,
+          "junction": false,
+          "rejected": false,
+          "reject_reason": null
+        },
+        "arrival_localization": {
+          "node_id": "C-",
+          "marker_id": "C-",
+          "confidence": 1.0,
+          "source": "mock",
+          "timestamp": 504787.939988125
+        }
+      }
+    },
+    {
+      "index": 6,
+      "action": "FOLLOW_EDGE",
+      "source": "C-",
+      "destination": "D-",
+      "completed": true,
+      "reason": "arrived at D-",
+      "duration_s": 7.633300265297294e-05,
+      "detail": {
+        "target_edge": "BLACK_RIGHT",
+        "stop_reason": "ARRIVAL",
+        "samples": 2,
+        "elapsed_s": 6.295798812061548e-05,
+        "recoveries": 0,
+        "acquired": true,
+        "fault": null,
+        "metrics": {
+          "edge": "BLACK_RIGHT",
+          "boundary_samples": 2,
+          "rms_error_pitches": 0.0,
+          "max_abs_error_pitches": 0.0,
+          "final_error_pitches": 0.0,
+          "rejected_samples": 0,
+          "ambiguous_samples": 0,
+          "curve_slow_samples": 0,
+          "minimum_base_command": 40
+        },
+        "final_detection": {
+          "raw": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "normalized": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "edge": "BLACK_RIGHT",
+          "timestamp": 504787.940066666,
+          "stable": true,
+          "stable_edge": "BLACK_RIGHT",
+          "stable_count": 5,
+          "age_s": 7.500057108700275e-07,
+          "outer_left": false,
+          "outer_right": false,
+          "junction": false,
+          "rejected": false,
+          "reject_reason": null
+        },
+        "arrival_localization": {
+          "node_id": "D-",
+          "marker_id": "D-",
+          "confidence": 1.0,
+          "source": "mock",
+          "timestamp": 504787.940070708
+        }
+      }
+    }
+  ],
+  "final_localization": {
+    "node_id": "D-",
+    "marker_id": "D-",
+    "source": "mock"
+  },
+  "fault": null
+}
+Verifying bundle hashes (no network access is used)
+verified 58 files and required wheels ['smbus2', 'waferbot']
+Creating virtual environment at /tmp/waferbot-upgrade-020.8QxnIa/venv
+Installing waferbot offline (--no-index, wheels only)
+Looking in links: /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.1.0/wheels
+Processing ./dist/waferbot-offline-0.1.0/wheels/waferbot-0.1.0-py3-none-any.whl
+Processing ./dist/waferbot-offline-0.1.0/wheels/smbus2-0.6.1-py2.py3-none-any.whl (from waferbot[hardware])
+Installing collected packages: smbus2, waferbot
+
+Successfully installed smbus2-0.6.1 waferbot-0.1.0
+
+Offline installation complete.
+
+  interpreter : /tmp/waferbot-upgrade-020.8QxnIa/venv/bin/python
+  cli         : /tmp/waferbot-upgrade-020.8QxnIa/venv/bin/waferbot
+
+Use it with an explicit shell path (no activation required):
+  /tmp/waferbot-upgrade-020.8QxnIa/venv/bin/waferbot --version
+
+Or activate the environment first:
+  . "/tmp/waferbot-upgrade-020.8QxnIa/venv/bin/activate"
+  waferbot --version
+
+Nothing starts automatically. Read-only hardware check next:
+  bash deployment/verify_hardware.sh --venv "/tmp/waferbot-upgrade-020.8QxnIa/venv"
+waferbot 0.1.0
+Verifying bundle hashes (no network access is used)
+verified 68 files and required wheels ['smbus2', 'waferbot']
+Creating virtual environment at /tmp/waferbot-upgrade-020.8QxnIa/venv
+Installing waferbot offline (--no-index, wheels only)
+Looking in links: /Users/srigan/microwaferalchemy/dist/waferbot-offline-0.2.0/wheels
+Processing ./dist/waferbot-offline-0.2.0/wheels/waferbot-0.2.0-py3-none-any.whl
+Processing ./dist/waferbot-offline-0.2.0/wheels/smbus2-0.6.1-py2.py3-none-any.whl (from waferbot[hardware])
+Installing collected packages: smbus2, waferbot
+  Attempting uninstall: smbus2
+    Found existing installation: smbus2 0.6.1
+    Uninstalling smbus2-0.6.1:
+      Successfully uninstalled smbus2-0.6.1
+  Attempting uninstall: waferbot
+    Found existing installation: waferbot 0.1.0
+    Uninstalling waferbot-0.1.0:
+      Successfully uninstalled waferbot-0.1.0
+
+Successfully installed smbus2-0.6.1 waferbot-0.2.0
+
+Offline installation complete.
+
+  interpreter : /tmp/waferbot-upgrade-020.8QxnIa/venv/bin/python
+  cli         : /tmp/waferbot-upgrade-020.8QxnIa/venv/bin/waferbot
+
+Use it with an explicit shell path (no activation required):
+  /tmp/waferbot-upgrade-020.8QxnIa/venv/bin/waferbot --version
+
+Or activate the environment first:
+  . "/tmp/waferbot-upgrade-020.8QxnIa/venv/bin/activate"
+  waferbot --version
+
+Nothing starts automatically. Read-only hardware check next:
+  bash deployment/verify_hardware.sh --venv "/tmp/waferbot-upgrade-020.8QxnIa/venv"
+waferbot 0.2.0

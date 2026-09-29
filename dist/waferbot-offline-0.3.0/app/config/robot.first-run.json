@@ -1,0 +1,27 @@
+{
+  "_comment": [
+    "Conservative first-run robot configuration. Verified flags stay false until",
+    "`waferbot calibrate wheels` and `waferbot calibrate sensors` have been run",
+    "and confirmed on the real chassis. max_speed caps each wheel at 5 PWM counts."
+  ],
+  "motor": {
+    "address": 43,
+    "bus": 1,
+    "max_speed": 5,
+    "wheel_labels": ["front_left", "rear_left", "front_right", "rear_right"],
+    "invert": [false, false, false, false],
+    "verified": false
+  },
+  "sensor": {
+    "address": 43,
+    "bus": 1,
+    "register": 10,
+    "bit_for_channel": [2, 3, 1, 0],
+    "black_is_raw_zero": true,
+    "verified": false
+  },
+  "safety": {
+    "motion_timeout_s": 0.5,
+    "watchdog_period_s": 0.05
+  }
+}
