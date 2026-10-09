@@ -1,0 +1,32 @@
+{
+  "apt_prerequisites": [
+    "python3-venv",
+    "python3-dev",
+    "i2c-tools",
+    "libi2c-dev"
+  ],
+  "installed_by": "deployment/offline_install.sh or deployment/install_pi.sh --bundle",
+  "name": "waferbot-offline-0.3.6",
+  "notes": [
+    "Includes the application source and its built wheel.",
+    "Third-party wheels are pure Python; no vendor directory is included.",
+    "Dependency download skipped (--no-download)."
+  ],
+  "platform": "any (pure-Python wheels only; no compiled extensions)",
+  "python_requires": ">=3.11",
+  "waferbot_version": "0.3.6",
+  "wheels": [
+    {
+      "filename": "smbus2-0.6.1-py2.py3-none-any.whl",
+      "license": "MIT",
+      "sha256": "650feeb27ca0ed58b07db4c10201c2a662c41305b7bf6e5fab9d888056f48180",
+      "size": 11767
+    },
+    {
+      "filename": "waferbot-0.3.6-py3-none-any.whl",
+      "license": "Proprietary",
+      "sha256": "58bdae17e74aa1baeb6880457995adbc2ebcb80ec90a15e481248fd2a72a849d",
+      "size": 152119
+    }
+  ]
+}

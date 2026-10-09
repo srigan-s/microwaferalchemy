@@ -6,22 +6,18 @@
     "illustrative example and physical execution rejects it."
   ],
   "follow": {
-    "rate_hz": 20.0,
-    "base_speed": 4,
-    "kp": 2.0,
-    "kd": 0.06,
-    "max_correction": 4,
-    "max_correction_delta": 1,
-    "min_curve_speed_factor": 0.45,
+    "rate_hz": 300.0,
+    "base_speed": 2,
+    "max_correction": 1,
+    "min_curve_speed_factor": 1.0,
     "curve_slowdown_start": 0.2,
-    "derivative_filter_alpha": 0.5,
     "correction_mode": "differential",
     "lateral_weight": 0.5,
     "acquisition_samples": 3,
     "acquisition_timeout_s": 3.0,
     "acquisition_confidence": 0.6,
     "ambiguous_confidence": 0.6,
-    "max_rejected_s": 0.3,
+    "max_rejected_s": 0.3, 
     "junction_speed_factor": 0.5,
     "junction_channels": 3,
     "edge_loss_samples": 3,
@@ -37,7 +33,22 @@
     "max_wrong_edge_s": 0.8,
     "arrival_confirmations": 1,
     "localization_max_age_s": 5.0,
-    "localization_min_confidence": 0.5
+    "localization_min_confidence": 0.5,
+    "kp_pwm_per_mm": 0.15,
+    "kd_pwm_s_per_mm": 0.005,
+    "ki_pwm_per_mm_s": 0.0,
+    "integral_limit_pwm": 0.0,
+    "max_correction_slew_pwm_per_s": 20.0,
+    "velocity_filter_tau_s": 0.05,
+    "sensor_positions_mm": [
+      -31.25,
+      -3.25,
+      3.25,
+      31.25
+    ],
+    "reference_mm": 0.0,
+    "ir_polling_hz": 300.0,
+    "controller_enabled": true
   },
   "switch": {
     "mode": "lateral",
@@ -93,3 +104,4 @@
   "counts_to_mps": null,
   "counts_to_mps_note": "uncalibrated: PWM counts are not converted to m/s"
 }
+

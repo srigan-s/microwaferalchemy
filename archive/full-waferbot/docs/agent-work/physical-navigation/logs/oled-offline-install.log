@@ -1,0 +1,25 @@
+Verifying bundle hashes (no network access is used)
+verified 71 files and required wheels ['smbus2', 'waferbot']
+Creating virtual environment at /tmp/waferbot-oled-release.azyKMn/venv
+Installing waferbot offline (--no-index, wheels only)
+Looking in links: dist/waferbot-offline-0.3.1/wheels
+Processing ./dist/waferbot-offline-0.3.1/wheels/waferbot-0.3.1-py3-none-any.whl
+Processing ./dist/waferbot-offline-0.3.1/wheels/smbus2-0.6.1-py2.py3-none-any.whl (from waferbot[hardware])
+Installing collected packages: smbus2, waferbot
+
+Successfully installed smbus2-0.6.1 waferbot-0.3.1
+
+Offline installation complete.
+
+  interpreter : /tmp/waferbot-oled-release.azyKMn/venv/bin/python
+  cli         : /tmp/waferbot-oled-release.azyKMn/venv/bin/waferbot
+
+Use it with an explicit shell path (no activation required):
+  /tmp/waferbot-oled-release.azyKMn/venv/bin/waferbot --version
+
+Or activate the environment first:
+  . "/tmp/waferbot-oled-release.azyKMn/venv/bin/activate"
+  waferbot --version
+
+Nothing starts automatically. Read-only hardware check next:
+  bash deployment/verify_hardware.sh --venv "/tmp/waferbot-oled-release.azyKMn/venv"

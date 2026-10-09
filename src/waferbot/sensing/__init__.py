@@ -1,43 +1,12 @@
-"""Sensing and control: edge detection, edge following, edge switching."""
+"""Four-sensor position estimate and PID line following."""
 
-from .edge import (
-    BoundaryEstimate,
-    EdgeDetection,
-    EdgeDetector,
-    EdgeState,
-    classify_middle,
-    detect_edge,
-    edge_byte_for,
-    estimate_boundary,
-)
-from .follower import (
-    EdgeFollower,
-    FollowResult,
-    FollowStopReason,
-    wheel_command,
-)
-from .switching import (
-    EdgeSwitcher,
-    SwitchAuthorization,
-    SwitchPhase,
-    SwitchResult,
-)
+from .edge import EdgeState
+from .follower import PIDFollower, RunResult, wheel_command
+from .pid import PIDController, PIDGains
+from .poller import LatestIRPoller
+from .position import EdgeVelocityEstimator, estimate_position
 
 __all__ = [
-    "EdgeDetection",
-    "BoundaryEstimate",
-    "EdgeDetector",
-    "EdgeFollower",
-    "EdgeState",
-    "EdgeSwitcher",
-    "FollowResult",
-    "FollowStopReason",
-    "SwitchAuthorization",
-    "SwitchPhase",
-    "SwitchResult",
-    "classify_middle",
-    "detect_edge",
-    "edge_byte_for",
-    "estimate_boundary",
-    "wheel_command",
+    "EdgeState", "PIDFollower", "RunResult", "wheel_command",
+    "PIDController", "PIDGains", "LatestIRPoller", "EdgeVelocityEstimator", "estimate_position",
 ]

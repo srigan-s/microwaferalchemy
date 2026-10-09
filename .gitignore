@@ -1,1 +1,5 @@
 vendor/yahboom/
+archive/full-waferbot/vendor/
+archive/full-waferbot/generated-active*/
+__pycache__/
+.pytest_cache/

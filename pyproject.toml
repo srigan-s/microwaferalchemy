@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "waferbot"
-version = "0.3.0"
-description = "MicroAlchemy physical robot hardware abstraction layer (Yahboom Raspbot V2 / Raspberry Pi 5)"
-readme = "HARDWARE_IMPLEMENTATION.md"
+version = "0.3.6"
+description = "PID-only line follower for the Yahboom Raspbot V2"
+readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "Proprietary" }
 dependencies = []
@@ -17,7 +17,6 @@ waferbot = "waferbot.cli:main"
 [project.optional-dependencies]
 # Only needed on the Raspberry Pi itself. The package imports cleanly without it.
 hardware = ["smbus2>=0.4.2"]
-vision = ["opencv-contrib-python-headless>=4.7,<5"]
 test = ["pytest>=7.4"]
 
 [tool.setuptools]
@@ -25,9 +24,6 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.setuptools.package-data]
-waferbot = ["data/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

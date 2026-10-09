@@ -1,0 +1,407 @@
+{
+  "bundle_version": "0.3.6",
+  "file_count": 80,
+  "files": [
+    {
+      "path": "README.txt",
+      "sha256": "d5fab25cfaa738e014dbb3c22c602026b02006f6bf3003101788a93ef37a8760",
+      "size": 703
+    },
+    {
+      "path": "app/HARDWARE_IMPLEMENTATION.md",
+      "sha256": "6a73ef6d04ef3f0b3b0250dc3bc74e55679f33a697a0a37ea7c798c42e371792",
+      "size": 30141
+    },
+    {
+      "path": "app/README.md",
+      "sha256": "cd24b6213b25a3935d387bc266511d96b21f652a20a7de2152a5a29dca954376",
+      "size": 18620
+    },
+    {
+      "path": "app/config/nav.example.json",
+      "sha256": "4d5892fa4ee379548e6228da6403ace95521b6cbf2acd3d91ef89ae0ed27d618",
+      "size": 3096
+    },
+    {
+      "path": "app/config/nav.first-run.json",
+      "sha256": "80df0c565e42e6fedbd442c003a1794e17388c6968a72499b79e8f04767d718e",
+      "size": 3101
+    },
+    {
+      "path": "app/config/nav.tuned.json",
+      "sha256": "813863fccbd678ba9d4688c8d28cd6f1bbe110391ad702815863e8a813d9a239",
+      "size": 3311
+    },
+    {
+      "path": "app/config/nav.windy-first-run.json",
+      "sha256": "2097a4275bd9f3f008c736fd6535a91b6a752a9ff30511411ca02beed0aeb0a3",
+      "size": 1538
+    },
+    {
+      "path": "app/config/robot.example.json",
+      "sha256": "a980a739fa9650677170d87ec5bb580f76d5289b54dae773658de91f6386247f",
+      "size": 458
+    },
+    {
+      "path": "app/config/robot.first-run.json",
+      "sha256": "577301e88fe18e4fc11c92018def534d4efe1b147e37ec1272918fd4075024dc",
+      "size": 728
+    },
+    {
+      "path": "app/deployment/README.md",
+      "sha256": "28b1283bf6eb16e4bed51abf94eebccfcdf7b980296fc294647042d646427c0f",
+      "size": 2182
+    },
+    {
+      "path": "app/deployment/deploy.sh",
+      "sha256": "26dfc96096be7b4853e1bcf22844aaa19ea039725feaf2d7e44db5b39de8ed49",
+      "size": 4923
+    },
+    {
+      "path": "app/deployment/install_pi.sh",
+      "sha256": "d81c4d71eed1af94ff95984fae314a79d2618df499a6c4d609eaf9a12176b3a5",
+      "size": 7042
+    },
+    {
+      "path": "app/deployment/offline_install.sh",
+      "sha256": "cd987dc3c3ab8b8a4ca74640c4f9c0e246073bed101e633c500a730a9b370b80",
+      "size": 3482
+    },
+    {
+      "path": "app/deployment/verify_hardware.sh",
+      "sha256": "766e6fed3edb74ac0c76fd3bac092309382676d0b670da36b35580dac3a36cd4",
+      "size": 4405
+    },
+    {
+      "path": "app/docs/APRILTAG_TESTING.md",
+      "sha256": "7e135864d3f7615c9be7aab494df616e9a2a313ecdb05988977359aa3edd2e10",
+      "size": 3820
+    },
+    {
+      "path": "app/docs/LINE_EDGE_TEST.md",
+      "sha256": "249659318bfbedca57e6801eb65327f09c8da33d2c909f7d5e53cfe6b550667e",
+      "size": 2897
+    },
+    {
+      "path": "app/docs/PHYSICAL_NAVIGATION_FILES.md",
+      "sha256": "364dea86c84f69902c37e16bde73d84d535b4bf8dea722c573e47606424a0ded",
+      "size": 4507
+    },
+    {
+      "path": "app/docs/PID_CONTROL.md",
+      "sha256": "7311232a8c30353e32e893269be737aed3b288dfe6168404188bd7df228d02a6",
+      "size": 7138
+    },
+    {
+      "path": "app/docs/ROBOT_TESTING.md",
+      "sha256": "af498671a7d139d544951a2971002df6e9026615606c5b40c185194483822cfa",
+      "size": 19443
+    },
+    {
+      "path": "app/maps/example_track.json",
+      "sha256": "70800beacf8c324d1e80bd333f97a6750f6a8127edcf7a9ccce0eba837eedf56",
+      "size": 12716
+    },
+    {
+      "path": "app/pyproject.toml",
+      "sha256": "333baaf8bc1e40697b18f0078c082f8f7ae2224dd9425b3a948cadd60d075134",
+      "size": 857
+    },
+    {
+      "path": "app/scripts/build_offline_bundle.py",
+      "sha256": "5b669c403ff5c242b4be2608b5ef15cf33bb8df31b8d4c70ca05cb87f9c34d7f",
+      "size": 12708
+    },
+    {
+      "path": "app/scripts/compare_pid.py",
+      "sha256": "c114abe9903349fdc8ecdbe918225f2d2e92b16955914b557517c8c7a758e040",
+      "size": 7288
+    },
+    {
+      "path": "app/scripts/replay_ir_pid.py",
+      "sha256": "8d79d5a9ed71a169d04198934adada0dcfdd38184e2984f90694a70299d07953",
+      "size": 4260
+    },
+    {
+      "path": "app/scripts/test_line_edge.py",
+      "sha256": "c8a6cea5cb43cedb2e6e268c37d75304e9beb1df5a9375485978a0e2ae5de282",
+      "size": 6545
+    },
+    {
+      "path": "app/scripts/test_line_follow.py",
+      "sha256": "d02ee2e6252eff82e56510f324cba5c5ec628c1c1d7b1cb03ae86561df62529c",
+      "size": 7378
+    },
+    {
+      "path": "app/src/waferbot/__init__.py",
+      "sha256": "6de52313a91922c34ab9df1108723fe5a0d04f1c374d4b87b37dc57d71930b3c",
+      "size": 1833
+    },
+    {
+      "path": "app/src/waferbot/calibration/__init__.py",
+      "sha256": "f082259014180153ac1f1c73cd2457cca8601b2ef884953f029e3348d7bfef3d",
+      "size": 937
+    },
+    {
+      "path": "app/src/waferbot/calibration/crossing.py",
+      "sha256": "9e22e8c3cb3fccc8e220d61f04dee9c8262b0f81db20c28d010de28ebb18cdb4",
+      "size": 6256
+    },
+    {
+      "path": "app/src/waferbot/calibration/sensors.py",
+      "sha256": "f6f14f322dc91a4548881ebaf6590b49cd6cf60b52eb2dbeea31389072e1a709",
+      "size": 8710
+    },
+    {
+      "path": "app/src/waferbot/calibration/speed.py",
+      "sha256": "b4a818bb35b234088b4482cd12302415dd788d647d1e8fd001790c6c7ece166e",
+      "size": 5078
+    },
+    {
+      "path": "app/src/waferbot/calibration/wheels.py",
+      "sha256": "c95a550a3d75079e030be5065350c27c5608156cc86ef55e729c26e6948b2992",
+      "size": 7144
+    },
+    {
+      "path": "app/src/waferbot/cli.py",
+      "sha256": "248c6d51bfbb04d2bd9dcd8a3882fe93aad866c4074362010260bd6b1ab8f64f",
+      "size": 57853
+    },
+    {
+      "path": "app/src/waferbot/config.py",
+      "sha256": "a3c5dcde27ab8075f028f74866eb33613031af9e24738dd8a8dc3f16e4bc755c",
+      "size": 11798
+    },
+    {
+      "path": "app/src/waferbot/data/example_track.json",
+      "sha256": "70800beacf8c324d1e80bd333f97a6750f6a8127edcf7a9ccce0eba837eedf56",
+      "size": 12716
+    },
+    {
+      "path": "app/src/waferbot/edge_angle_experiment.py",
+      "sha256": "e43c98476d5bcb852811ea160305e77cd514bc7ac032965a41aafd4feaf1b3d4",
+      "size": 14090
+    },
+    {
+      "path": "app/src/waferbot/errors.py",
+      "sha256": "402e55ddc7913325982f2ddf24a0acf8484f8c36587ffc436e3ccf746c2aac18",
+      "size": 1913
+    },
+    {
+      "path": "app/src/waferbot/geometry.py",
+      "sha256": "d38f8a2243e47a5aae5dd9709529a6dafa771560eaf76be9e1ed78fd87a0d4b1",
+      "size": 12705
+    },
+    {
+      "path": "app/src/waferbot/hardware/__init__.py",
+      "sha256": "a4e89b7b06f1aa7f990e2775f95b9f774fef513a51b9a345abb0080f56523d5d",
+      "size": 844
+    },
+    {
+      "path": "app/src/waferbot/hardware/bus.py",
+      "sha256": "99d85befb15cf6e097156d00d53bbbb22317051f238ab89f651d785cb4de419d",
+      "size": 1407
+    },
+    {
+      "path": "app/src/waferbot/hardware/mock.py",
+      "sha256": "18dda4a1a4b56dafc999e74e68552a141a1113fac211ec1b7d91a1f023b6e6a9",
+      "size": 7027
+    },
+    {
+      "path": "app/src/waferbot/hardware/motor_driver.py",
+      "sha256": "bc91b9ae0a0ddeed54d608d43ab7f566b6d9be0e53b5c9dfbab5dbbdc743380c",
+      "size": 5660
+    },
+    {
+      "path": "app/src/waferbot/hardware/registers.py",
+      "sha256": "385cd4c1da841f38709a28d3eb99581cd1daf34c4f02185bbe860a8f67a9e6a1",
+      "size": 3128
+    },
+    {
+      "path": "app/src/waferbot/hardware/sensors.py",
+      "sha256": "f1977bb236998cf1f6d328e7561dd4afcd11899744ee48a09ccf995999ca19c1",
+      "size": 5004
+    },
+    {
+      "path": "app/src/waferbot/hardware/transport.py",
+      "sha256": "5a9878a1e61fd9e4e04f912e62549498380a521951fbaae9dec96da1474d20ec",
+      "size": 3551
+    },
+    {
+      "path": "app/src/waferbot/hardware/ultrasonic.py",
+      "sha256": "fcb4eb90e1b2ade8abb070811170efd0823a5ea0e5a72cdc749ca873b939ae0b",
+      "size": 4779
+    },
+    {
+      "path": "app/src/waferbot/ir_experiment.py",
+      "sha256": "6a9504ed1b5039d9b37b762f62fe26acf0b829a58aa8a89a3a475c4e0eea8792",
+      "size": 6738
+    },
+    {
+      "path": "app/src/waferbot/kinematics.py",
+      "sha256": "87499318f378012ee2edd2341c6f765b19abb68eb3de54cb3c0b78a9d3cd9631",
+      "size": 3856
+    },
+    {
+      "path": "app/src/waferbot/localization.py",
+      "sha256": "302609ba1b9828713da3e6d24ffe5ed44b1bb9cc98c49527c042d8426b11366c",
+      "size": 12849
+    },
+    {
+      "path": "app/src/waferbot/nav/__init__.py",
+      "sha256": "1d219e1826af40d70436b9380e0c37c9385dfe74249c4b409daf4fe019c44635",
+      "size": 579
+    },
+    {
+      "path": "app/src/waferbot/nav/executor.py",
+      "sha256": "f14b40b5ffd08b445745b8d88723bfe70be4671ac40c06bb4fe0c980b6cb1aaa",
+      "size": 35964
+    },
+    {
+      "path": "app/src/waferbot/nav/graph.py",
+      "sha256": "381628420c0e145864c38445b3b5976914d85770170ba2ba2ee47446abc13a15",
+      "size": 25085
+    },
+    {
+      "path": "app/src/waferbot/nav/planner.py",
+      "sha256": "999cbc639c77877e94bc34d0fad6b33a72809cc9350f79402c41b2b862b33efa",
+      "size": 11656
+    },
+    {
+      "path": "app/src/waferbot/navconfig.py",
+      "sha256": "72e70c5d7ae21481cba52c4fd965a42518c43afe999243b77900058685e86ed2",
+      "size": 23201
+    },
+    {
+      "path": "app/src/waferbot/process.py",
+      "sha256": "19fc029a4c6a65e85a4b817a3e060e86a80233f26b5c6c1acc897b52490e283c",
+      "size": 9875
+    },
+    {
+      "path": "app/src/waferbot/protocol.py",
+      "sha256": "ee6ac37c96f6da9beabe185d085a76dffcb7070693a71cca8a8915d834f7cc79",
+      "size": 2003
+    },
+    {
+      "path": "app/src/waferbot/robot.py",
+      "sha256": "20a1e26af7a9e0dcb87512c3c94e20add75d21a315e860ca78d8db35fc19d321",
+      "size": 20937
+    },
+    {
+      "path": "app/src/waferbot/safety.py",
+      "sha256": "c62774640f1b63a25fbc139e5901a99b35c800a229f82388bc5a8c0925077b6e",
+      "size": 9619
+    },
+    {
+      "path": "app/src/waferbot/sensing/__init__.py",
+      "sha256": "62aa7c09f7ad6364e0658124b94849e3e6812a6c5c5296a3471d4fb00eb2dc8c",
+      "size": 816
+    },
+    {
+      "path": "app/src/waferbot/sensing/control_log.py",
+      "sha256": "f271887ac9b53b5227a0f8214730001a1e087709f63a48b9159276d629c89225",
+      "size": 1470
+    },
+    {
+      "path": "app/src/waferbot/sensing/edge.py",
+      "sha256": "db400e29974e9e8df7e400eb083ce0dc80ad5d5f969aef3ac8dc53e901ba4e8c",
+      "size": 18559
+    },
+    {
+      "path": "app/src/waferbot/sensing/follower.py",
+      "sha256": "ac16973dbd4b1e9de869a3ef54c6b96dfbacdfc6d8a3a6562cada31df292900b",
+      "size": 36428
+    },
+    {
+      "path": "app/src/waferbot/sensing/pid.py",
+      "sha256": "a1dee31fb35731d71775c1fbe47dca095d3cddc26c73bf124aaa5b53d79ee7bb",
+      "size": 4510
+    },
+    {
+      "path": "app/src/waferbot/sensing/poller.py",
+      "sha256": "896285efe5cebfaf41dcab1a3ad2e57fd3994aac72ca18eb3b2ad49b4c8bad69",
+      "size": 3745
+    },
+    {
+      "path": "app/src/waferbot/sensing/position.py",
+      "sha256": "2004a16c3428086c7512b360385eff77d4659d3114e054967cdcb5fb39bc9cd1",
+      "size": 6053
+    },
+    {
+      "path": "app/src/waferbot/sensing/switching.py",
+      "sha256": "c4f8ca3aba18c91cf9cef3f87e9e757b6733b04ffdffaddf4944aea2677e3796",
+      "size": 36174
+    },
+    {
+      "path": "app/src/waferbot/simulation/__init__.py",
+      "sha256": "5e88e05ff904f4dc601805cfaac6d9024190379dd6351de7414dc5ff42664c42",
+      "size": 643
+    },
+    {
+      "path": "app/src/waferbot/simulation/tape_model.py",
+      "sha256": "cfb657d3e784f9873b186b2f2b7f8d88be7d5cb75c8b07b2957452d206d6b17d",
+      "size": 17335
+    },
+    {
+      "path": "app/src/waferbot/telemetry.py",
+      "sha256": "b233b32aad51fde752f5aa82b5129a5053de3c22abcf83b9ff4e33ae4f7db660",
+      "size": 7744
+    },
+    {
+      "path": "app/src/waferbot/vision/__init__.py",
+      "sha256": "1be8aa047c25388ec47cd1bd36fd6ce2031e3b99a922bc48d5640f9d7a809b07",
+      "size": 266
+    },
+    {
+      "path": "app/src/waferbot/vision/apriltag.py",
+      "sha256": "8007897baa40cfe774bda6dd89f37c4da76306cedeb6e9ef50346b6a10bd97be",
+      "size": 9761
+    },
+    {
+      "path": "app/src/waferbot/vision/yahboom_oled.py",
+      "sha256": "5e3528681849b36b4bec76699145f15711e45b09dc372027631ef8f379258862",
+      "size": 7122
+    },
+    {
+      "path": "app/src/waferbot/watchdog.py",
+      "sha256": "118a3772d8918881162b64be2d059c7d934bcd990ff036f9561f3e4bc6e04f4f",
+      "size": 4329
+    },
+    {
+      "path": "deployment/README.md",
+      "sha256": "28b1283bf6eb16e4bed51abf94eebccfcdf7b980296fc294647042d646427c0f",
+      "size": 2182
+    },
+    {
+      "path": "deployment/deploy.sh",
+      "sha256": "26dfc96096be7b4853e1bcf22844aaa19ea039725feaf2d7e44db5b39de8ed49",
+      "size": 4923
+    },
+    {
+      "path": "deployment/install_pi.sh",
+      "sha256": "d81c4d71eed1af94ff95984fae314a79d2618df499a6c4d609eaf9a12176b3a5",
+      "size": 7042
+    },
+    {
+      "path": "deployment/offline_install.sh",
+      "sha256": "cd987dc3c3ab8b8a4ca74640c4f9c0e246073bed101e633c500a730a9b370b80",
+      "size": 3482
+    },
+    {
+      "path": "deployment/verify_hardware.sh",
+      "sha256": "766e6fed3edb74ac0c76fd3bac092309382676d0b670da36b35580dac3a36cd4",
+      "size": 4405
+    },
+    {
+      "path": "wheels/smbus2-0.6.1-py2.py3-none-any.whl",
+      "sha256": "650feeb27ca0ed58b07db4c10201c2a662c41305b7bf6e5fab9d888056f48180",
+      "size": 11767
+    },
+    {
+      "path": "wheels/waferbot-0.3.6-py3-none-any.whl",
+      "sha256": "58bdae17e74aa1baeb6880457995adbc2ebcb80ec90a15e481248fd2a72a849d",
+      "size": 152119
+    }
+  ],
+  "generated_by": "scripts/build_offline_bundle.py"
+}
